@@ -2,6 +2,21 @@
 
 Customization via framework-agnostic Custom Elements. Plugins are vanilla JS `HTMLElement` subclasses -- no Angular dependency. Host communicates via HTML attributes (host -> plugin) and `CustomEvent` (plugin -> host).
 
+## When to Use This Approach
+
+**Use this approach if you want:**
+- Framework-agnostic plugins (no Angular dependency)
+- Plugins built with React, Vue, Svelte, or vanilla JS
+- Complete technology independence between host and plugins
+- Plugins that work across multiple host applications
+
+**Don't use this approach if you want:**
+- Angular DI access in plugins (no service injection)
+- Type-safe host-plugin communication
+- Easy data passing (limited to string attributes)
+- Angular features in plugins (pipes, directives, routing)
+- Compile-time interface validation
+
 ## Technique
 
 Customer defines plain Web Components:

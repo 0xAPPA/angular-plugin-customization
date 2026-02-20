@@ -2,6 +2,20 @@
 
 Customization via named extension points using `ViewContainerRef`. A registry maps extension point names to lazy-loaded Angular components. Components are code-split into separate chunks and loaded on demand.
 
+## When to Use This Approach
+
+**Use this approach if you want:**
+- Named extension points with lazy-loaded Angular components
+- Code-splitting for better initial load performance
+- Components to access Angular DI and features
+- Simple registry-based component resolution
+
+**Don't use this approach if you want:**
+- True hot-swapping (components pre-bundled in host)
+- Independent plugin deployment (plugins in host bundle)
+- Avoid host rebuilds when adding plugins
+- Runtime loading from external sources
+
 ## Technique
 
 Registry maps string names to lazy component loaders:

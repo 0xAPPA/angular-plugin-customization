@@ -4,6 +4,21 @@ Customization via runtime-loaded remote Angular apps. The host discovers and loa
 
 This demo **simulates** the pattern locally since real Module Federation requires multi-project webpack/esbuild setup.
 
+## When to Use This Approach
+
+**Use this approach if you want:**
+- Independent deployment of plugins without rebuilding the host
+- Runtime plugin discovery and loading
+- Per-customer plugin bundles deployed to CDN
+- True plugin hot-swapping
+
+**Don't use this approach if you want:**
+- Simple infrastructure (requires webpack/esbuild config, CDN, manifests)
+- Easy debugging (distributed bundles complicate stack traces)
+- Minimal DevOps expertise (complex build pipelines per plugin)
+- Loose version coupling (Angular version must match exactly across host/plugins)
+- Avoid singleton dependency conflicts
+
 ## Technique
 
 Host defines a manifest of remote modules:

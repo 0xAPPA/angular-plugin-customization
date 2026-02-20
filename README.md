@@ -51,3 +51,12 @@ cd approach-N-*
 npx ng serve
 # http://localhost:4200
 ```
+
+## Next Steps
+- Summarize which parts need to be extensible
+  - search filter, row context menu, custom table column, context menu for all selected rows, sidebar inject custom component  
+- Create POC Web Components & Module Federation Client
+- (Create POC Web Components & Module Federation Archetype)
+
+
+

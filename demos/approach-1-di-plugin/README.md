@@ -2,6 +2,20 @@
 
 Customization via Angular's `InjectionToken` with `multi: true`. Plugins implement a typed interface and are registered as DI providers. The host component collects all registered plugins automatically.
 
+## When to Use This Approach
+
+**Use this approach if you want:**
+- Simple, type-safe plugin registration using Angular DI
+- Compile-time validation of plugin contracts
+- Zero infrastructure overhead (no build pipelines, CDN, manifests)
+- Plugins to access Angular services via DI
+
+**Don't use this approach if you want:**
+- Hot-swapping plugins without rebuilding the host
+- Independent deployment of customer plugins
+- Selective plugin loading per customer (all plugins bundled together)
+- Plugins deployed separately from host releases
+
 ## Technique
 
 Define a contract interface + `InjectionToken`:

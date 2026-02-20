@@ -2,6 +2,20 @@
 
 Customization via JSON configuration. No customer code needed -- all UI behavior controlled by a config object (theme, visible columns, feature toggles). Config can be loaded from API/DB and hot-swapped at runtime.
 
+## When to Use This Approach
+
+**Use this approach if you want:**
+- Zero custom code from customers (only JSON config)
+- Runtime configuration hot-swapping via API/DB
+- Simple deployment (no plugin builds or CDN)
+- Predefined customization options (themes, toggles, column visibility)
+
+**Don't use this approach if you want:**
+- Arbitrary custom behavior (only pre-built options available)
+- Customers to add new functionality (not just toggle existing)
+- True plugin extensibility (this is configuration, not plugins)
+- Scale beyond what you pre-built
+
 ## Technique
 
 Define config shape as a typed interface:
